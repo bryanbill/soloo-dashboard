@@ -3,3 +3,4 @@ export { Header } from "./Header";
 export { Dashboard } from "./Dashboard";
 export { UserAppsCard } from "./Cards/UserAppsCard";
 export { ProfileCard } from "./Cards/ProfileCard";
+export { UploadCard } from "./Cards/UploadCard";

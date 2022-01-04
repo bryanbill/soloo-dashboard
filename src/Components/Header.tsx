@@ -25,6 +25,7 @@ export const Header = () => {
               name="search"
               className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-transparent w-full h-10 focus:outline-none focus:border-primary"
               placeholder="Search..."
+              autoComplete="false"
             />
           </div>
           <div className="flex md:hidden">
