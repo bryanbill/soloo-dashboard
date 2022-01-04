@@ -4,3 +4,4 @@ export { Dashboard } from "./Dashboard";
 export { UserAppsCard } from "./Cards/UserAppsCard";
 export { ProfileCard } from "./Cards/ProfileCard";
 export { UploadCard } from "./Cards/UploadCard";
+export { ConnectDeviceCard } from "./Cards/ConnectDeviceCard";
