@@ -10,14 +10,17 @@ import {
 
 export const Dashboard = () => {
   return (
-    <div className="container mx-auto px-2 bg-grey-200 h-full">
-      <UserAppsCard />
+    <div className="container  px-2 bg-grey-200 h-full">
+      {/* <UserAppsCard />
       <ProfileCard />
       <UploadCard />
       <ConnectDeviceCard />
       <WalletPreviewCard />
       <OverviewCard />
-      <InfoCard />
+      <InfoCard /> */}
+      <div className="h-full pl-2  mt-14 mb-10 md:ml-52 bg-grey-200">
+        {"Main BOdy"}
+      </div>
     </div>
   );
 };

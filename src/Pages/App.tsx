@@ -1,16 +1,19 @@
 import React from "react";
-import { Dashboard, Header, Sidebar } from "../Components";
+import {
+  Dashboard,
+  Header,
+  HeaderTest,
+  Sidebar,
+  SidebarTest,
+} from "../Components";
 import { Footer } from "../Components/Footer";
 
 function App() {
   return (
-    <div className="flex flex-row  min-h-screen bg-gray-100 text-gray-800">
-      <Sidebar />
-      <main className="main flex flex-col flex-grow -ml-64 md:ml-0 transition-all duration-150 ease-in">
-        <Header />
-        <Dashboard />
-        <Footer />
-      </main>
+    <div className="min-h-screen flex flex-col flex-auto flex-shrink-0 antialiased bg-backgroundColor dark:bg-gray-700 text-black dark:text-white">
+      <HeaderTest />
+      <SidebarTest />
+      <Dashboard />
     </div>
   );
 }

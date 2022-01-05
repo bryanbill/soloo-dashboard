@@ -8,3 +8,5 @@ export { ConnectDeviceCard } from "./Cards/ConnectDeviceCard";
 export { WalletPreviewCard } from "./Cards/WalletPreviewCard";
 export { OverviewCard } from "./Cards/OverviewCard";
 export { InfoCard } from "./Cards/InfoCard";
+export { SidebarTest } from "./SidebarTest";
+export { HeaderTest } from "./HeaderTest";
