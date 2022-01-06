@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         backgroundColor: "#faf9f8",
         primary: "#FDA050",
-        dark: "#3D412C",
+        primaryDark: "#3D412C",
         primaryOrange: "#EB470D",
         primaryMaroon: "#612E2D",
         lightBrown: "#D3BEAB",
@@ -18,5 +18,5 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 };
