@@ -11,3 +11,4 @@ export { InfoCard } from "./Cards/InfoCard";
 export { AppStack } from "./Cards/AppStack";
 export { UsersTable } from "./Tables/UsersTable";
 export { ConnectDeviceModal } from "./Modals/ConnectDeviceModal";
+export { CreateAppModal } from "./Modals/CreateAppModal";
