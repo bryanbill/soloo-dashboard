@@ -1,6 +1,7 @@
 import {
   AppStack,
   ConnectDeviceCard,
+  ConnectDeviceModal,
   InfoCard,
   OverviewCard,
   ProfileCard,
@@ -12,7 +13,7 @@ import {
 
 export const Dashboard = () => {
   return (
-    <div data-theme="dark" className="container">
+    <div className="overflow-y-hidden overflow-x-hidden h-full mt-14  md:ml-52 ml-28 bg-grey-200 ">
       {/* <UserAppsCard />
       <ProfileCard />
       <UploadCard />
@@ -20,27 +21,32 @@ export const Dashboard = () => {
       <WalletPreviewCard />
       <OverviewCard />
       <InfoCard /> */}
-      <div className="h-full pl-2  mt-14  md:ml-52 ml-28 bg-grey-200">
-        <div className="flex items-center  justify-between md:flex-row flex-col">
+      <div className="p-2">
+        <div className="flex w-full md:items-center justify-between flex-col md:flex-row">
           {/* Greetings */}
-          <div className="flex flex-col justify-between">
-            <div className="text-black font-bold text-md">
+          <div className="flex flex-row md:w-4/6 md:flex-col justify-between text-black font-bold text-md">
+            <div className="">
               <div className="text-black font-bold text-3xl">
                 Good Evening John!
               </div>
-              <span className="font-bold text-xl">|</span>$45,000.00
+            </div>
+            <div>
+              <span className="font-bold text-xl invisible md:visible">|</span>
+              $45,000.00
             </div>
           </div>
 
-          <ConnectDeviceCard />
+          <div className="flex w-full md:w-2/6">
+            <ConnectDeviceCard />
+          </div>
         </div>
 
-        <div className="flex items-center w-full justify-between mt-2">
-          <div className="flex w-1/6">
+        <div className="flex flex-col md:flex-row items-center w-full justify-between mt-2">
+          <div className="flex w-full md:w-1/6">
             <OverviewCard />
           </div>
-          <div className="flex  rounded-xl w-5/6 flex-row justify-between items-center bg-primaryDark text-white h-52">
-            <div className="flex flex-col my-4 pl-6 h-28 w-2/6">
+          <div className="flex md:ml-4  shadow-xl rounded-xl w-full md:w-5/6 flex-row justify-between items-center bg-white text-black md:h-52 h-max">
+            <div className="flex flex-col items-start my-4 pl-6 h-28 w-2/6">
               <div className="text-semibold font-lg">
                 Currently Active Devices
               </div>
@@ -70,29 +76,13 @@ export const Dashboard = () => {
             </div>
           </div>
           {/* Modal Container */}
-          <div id="modal" className="modal">
-            <div data-theme="light" className="modal-box">
-              <p>
-                Enim dolorem dolorum omnis atque necessitatibus. Consequatur aut
-                adipisci qui iusto illo eaque. Consequatur repudiandae et. Nulla
-                ea quasi eligendi. Saepe velit autem minima.
-              </p>
-              <div className="modal-action">
-                <a href="#" className="btn btn-primary">
-                  Accept
-                </a>
-                <a href="/" className="btn">
-                  Close
-                </a>
-              </div>
-            </div>
-          </div>
+          <ConnectDeviceModal />
         </div>
         {/* End of Overview */}
 
         {/* Stats */}
-        <div className="flex w-full mt-4 justify-between">
-          <div className="font-bold text-2xl">Stats Info.</div>
+        <div className="flex w-full my-2 items-center justify-between">
+          <div className="font-bold text-2xl">Statistics</div>
 
           <div className="dropdown dropdown-end">
             <div tabIndex={0} className="m-1 btn">
@@ -106,10 +96,17 @@ export const Dashboard = () => {
                 <a>First Quarter</a>
               </li>
               <li>
-                <a>Item 2</a>
+                <a>Second Quarter</a>
               </li>
               <li>
-                <a>Item 3</a>
+                <a>Third Quarter</a>
+              </li>
+              <li
+                onClick={() => {
+                  //set the value clicked
+                }}
+              >
+                <a id="last-quarter">Last Quarter</a>
               </li>
             </ul>
           </div>
@@ -132,7 +129,7 @@ export const Dashboard = () => {
               </svg>
             </div>
             <div className="stat-title">Total Likes</div>
-            <div className="stat-value text-primary">25.6K</div>
+            <div className="stat-value">25.6K</div>
             <div className="stat-desc">21% more than last month</div>
           </div>
           <div className="stat">
@@ -152,7 +149,7 @@ export const Dashboard = () => {
               </svg>
             </div>
             <div className="stat-title">Page Views</div>
-            <div className="stat-value text-primaryMaroon">2.6M</div>
+            <div className="stat-value">2.6M</div>
             <div className="stat-desc">21% more than last month</div>
           </div>
           <div className="stat">
@@ -170,9 +167,33 @@ export const Dashboard = () => {
 
             <div className="stat-title">Tasks done</div>
             <div className="stat-value">86%</div>
-            <div className="stat-desc text-info">31 tasks remaining</div>
+            <div className="stat-desc ">31 tasks remaining</div>
           </div>
         </div>
+        <div className="flex w-full mt-4 justify-between items-center my-2">
+          <div className="font-bold text-2xl">All Apps</div>
+
+          <div className="dropdown dropdown-end">
+            <div tabIndex={0} className="m-1 btn">
+              <i className="fas fa-list"></i>
+            </div>
+            <ul
+              tabIndex={0}
+              className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <a>Free</a>
+              </li>
+              <li>
+                <a>Paid</a>
+              </li>
+              <li>
+                <a>Beta</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* App List */}
       </div>
     </div>
   );

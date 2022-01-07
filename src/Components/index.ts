@@ -10,3 +10,4 @@ export { OverviewCard } from "./Cards/OverviewCard";
 export { InfoCard } from "./Cards/InfoCard";
 export { AppStack } from "./Cards/AppStack";
 export { UsersTable } from "./Tables/UsersTable";
+export { ConnectDeviceModal } from "./Modals/ConnectDeviceModal";
