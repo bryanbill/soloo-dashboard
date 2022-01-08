@@ -1,5 +1,5 @@
 import React from "react";
-import { AppWrapper, Dashboard, Header, Sidebar } from "../Components";
+import { AppWrapper, Dashboard } from "../Components";
 
 function App() {
   return (

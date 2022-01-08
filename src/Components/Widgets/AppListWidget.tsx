@@ -15,6 +15,7 @@ export const AppListWidget = () => {
     description: string;
   }) => {
     setCreateAppModal(app);
+    console.log(app);
     openModal("create-app-modal");
   };
   const list = [
@@ -45,8 +46,8 @@ export const AppListWidget = () => {
       <div className="flex w-full mt-4 justify-between items-center my-2">
         <div className="font-bold text-2xl">All Apps</div>
         <CreateAppModal
-          appname={initialValue.appname}
-          description={initialValue.description}
+          appname={appModalValues.appname}
+          description={appModalValues.description}
           onSubmit={() => closeModal()}
         />
         <div className="dropdown dropdown-end">
