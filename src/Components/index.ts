@@ -13,8 +13,8 @@ export { OverviewCard } from "./Cards/OverviewCard";
 export { InfoCard } from "./Cards/InfoCard";
 
 // Stacks
-export { AppStack } from "./Cards/AppStack";
-
+export { AppStack } from "./Stacks/AppStack";
+export { AvatarStack } from "./Stacks/AvatarStack";
 // Tables
 export { UsersTable } from "./Tables/UsersTable";
 
@@ -25,3 +25,8 @@ export { CreateAppModal } from "./Modals/CreateAppModal";
 // Wrappers
 export { AppWrapper } from "./Wrappers/AppWrapper";
 export { DashboardWrapper } from "./Wrappers/DashboardWrapper";
+
+// Widgets
+export { GreetingWidget } from "./Widgets/GreetingWidget";
+export { StatisticsWidget } from "./Widgets/StatisticsWidget";
+export { Overview } from "./Widgets/Overview";
