@@ -1,3 +1,6 @@
+import { ConnectDeviceModal } from "..";
+import { openModal } from "../../utils/open_modal";
+
 export const ConnectDeviceCard = () => {
   return (
     <div className="flex bg-white p-3 rounded-xl shadow-xl items-center justify-between mt-4 w-full">
@@ -17,11 +20,12 @@ export const ConnectDeviceCard = () => {
       <div className="flex space-x-2 items-center ">
         <div
           className="bg-indigo-300 rounded-md p-2 flex items-center btn "
-          onClick={() => window.location.assign("#modal")}
+          onClick={() => openModal("connect-device-modal")}
         >
           <i className="fas fa-plus fa-sm text-black"></i>
         </div>
       </div>
+      <ConnectDeviceModal />
     </div>
   );
 };

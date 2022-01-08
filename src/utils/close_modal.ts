@@ -1,3 +1,3 @@
-export const CloseModal = () => {
+export const closeModal = () => {
   window.location.assign("#");
 };

@@ -1,8 +1,9 @@
 import { QRCode } from "react-qrcode-logo";
+import { closeModal } from "../../utils/close_modal";
 
 export const ConnectDeviceModal = () => {
   return (
-    <div id="modal" className="modal">
+    <div id="connect-device-modal" className="modal">
       <div
         data-theme="light"
         className="modal-box flex items-center w-72 flex-col"
@@ -17,7 +18,7 @@ export const ConnectDeviceModal = () => {
         </p>
         <div
           className="btn btn-primary bg-primary border border-transparent hover:bg-primaryDark"
-          onClick={() => window.location.assign("#")}
+          onClick={() => closeModal()}
         >
           Close
         </div>
