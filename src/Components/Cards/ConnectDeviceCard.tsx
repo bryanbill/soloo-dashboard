@@ -1,7 +1,7 @@
 import { ConnectDeviceModal } from "..";
 import { openModal } from "../../utils/open_modal";
 
-export const ConnectDeviceCard = () => {
+export const ConnectDeviceCard = (props: { id: string }) => {
   return (
     <div className="flex bg-white p-3 rounded-xl shadow-xl items-center justify-between mt-4 w-full">
       <div className="flex space-x-6 items-center">
@@ -25,7 +25,7 @@ export const ConnectDeviceCard = () => {
           <i className="fas fa-plus fa-sm text-black"></i>
         </div>
       </div>
-      <ConnectDeviceModal />
+      <ConnectDeviceModal userId={props.id} />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { QRCode } from "react-qrcode-logo";
 import { closeModal } from "../../utils/close_modal";
 
-export const ConnectDeviceModal = () => {
+export const ConnectDeviceModal = (props: { userId: string }) => {
   return (
     <div id="connect-device-modal" className="modal">
       <div
@@ -11,7 +11,7 @@ export const ConnectDeviceModal = () => {
         <div className="title">Scan to Connect</div>
         <p>
           <QRCode
-            value="http://192.168.0.105:3000"
+            value={props.userId}
             logoImage="https://i.pravatar.cc/300"
             fgColor="#3D412C"
           />

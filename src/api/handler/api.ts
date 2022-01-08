@@ -11,8 +11,10 @@ export class Api {
     };
     this.instance = axios.create(this.headers);
   }
-  public get<T>(url: string): Promise<T> {
-    return this.instance.get(url);
+  public async get<T>(url: string): Promise<T> {
+    return (
+      await this.instance.get(this.baseUrl + url, { withCredentials: true })
+    ).data;
   }
   public post<T>(url: string, data: any): Promise<T> {
     return this.instance.post(url, data);

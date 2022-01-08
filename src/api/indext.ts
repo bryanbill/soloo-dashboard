@@ -1,1 +1,1 @@
-export const getUser = () => {};
+export { getUser } from "./users/getUser";
