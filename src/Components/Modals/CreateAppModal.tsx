@@ -14,9 +14,9 @@ export const CreateAppModal = (props: CreateAppProps) => {
         <p>Create Your {props.appname}</p>
         <div
           className="btn btn-primary bg-primary border border-transparent hover:bg-primaryDark"
-          onClick={() => window.location.assign("#")}
+          onClick={() => props.onSubmit(props.appname, props.description)}
         >
-          Close
+          Create
         </div>
       </div>
     </div>

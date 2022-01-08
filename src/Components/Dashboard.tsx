@@ -12,6 +12,7 @@ import {
   UsersTable,
   WalletPreviewCard,
 } from ".";
+import { CloseModal } from "../utils/close_modal";
 
 export const Dashboard = () => {
   let initialValue = {
@@ -55,7 +56,10 @@ export const Dashboard = () => {
       <CreateAppModal
         appname={appModalValues.appname}
         description={appModalValues.description}
-        onSubmit={() => {}}
+        onSubmit={(e, b) => {
+          console.log(e);
+          CloseModal();
+        }}
       />
 
       <div className="p-2">
@@ -195,9 +199,9 @@ export const Dashboard = () => {
                 className="inline-block w-8 h-8 stroke-current"
               >
                 <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 ></path>
               </svg>
@@ -253,7 +257,7 @@ export const Dashboard = () => {
         <div className="flex flex-row flex-wrap w-full items-center justify-between">
           {list.map((element, index) => {
             return (
-              <div className="flex flex-col items-center card w-56 shadow-xl m-1">
+              <div className="flex flex-col items-center card w-56 shadow-xl m-1" key={index}>
                 <div
                   className="card-body"
                   style={{ backgroundImage: element.logo }}
