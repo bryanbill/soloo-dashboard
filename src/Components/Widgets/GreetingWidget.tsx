@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { ConnectDeviceCard } from "..";
-import { getUser } from "../../api/indext";
+import { getUser } from "../../api";
 import { getWallet } from "../../api/wallet/getWallet";
 import { User, Wallet } from "../../types";
 

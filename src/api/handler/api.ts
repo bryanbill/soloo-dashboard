@@ -1,9 +1,10 @@
 import axios, { AxiosInstance } from "axios";
+import { Constants } from "./constants";
 
 export class Api {
   private headers = {};
-  protected baseUrl = "http://localhost:4040/v1";
   private instance: AxiosInstance;
+  private baseUrl = new Constants().url;
   constructor() {
     this.headers = {
       withCredentials: true,
